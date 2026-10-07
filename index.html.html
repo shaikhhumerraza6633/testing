@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Profile</title>
+<link href="•  Dr. Babasaheb Ambedkar Marathwada University" rel="stylesheet">
+<style>
+  /* basic setup */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#2a1a4a; color:#ffffff; font-family:'Poppins', Arial, sans-serif; font-size:17px; line-height:1.7; }
+  .container { width:90%; max-width:1000px; margin:0 auto; }
+
+  /* navbar */
+  .navbar { background:#1d1136; padding:16px 0; position:sticky; top:0; z-index:10; }
+  .navbar .container { display:flex; justify-content:space-between; align-items:center; }
+  .navbar h3 { font-family:'Pacifico', cursive; font-weight:400; color:#ff8a65; font-size:24px; }
+  .navbar a { color:#e6dcff; text-decoration:none; margin-left:22px; font-weight:500; }
+  .navbar a:hover { color:#ff8a65; }
+
+  /* top part */
+  .top { padding:70px 0 60px; }
+  .top .container { display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap; }
+  .text { flex:1; min-width:280px; }
+  .hello { color:#ff8a65; font-weight:600; }
+  h1 { font-family:'Pacifico', cursive; font-weight:400; font-size:56px; line-height:1.25; margin:6px 0 10px; }
+  .role { color:#ffd54f; font-weight:500; font-size:19px; margin-bottom:18px; }
+  .text p { color:#dcd0f5; max-width:500px; }
+
+  /* photo - 3 layers: big, medium (polaroid), small (circle) */
+  .photo { position:relative; width:320px; height:400px; margin:0 auto; }
+  .photo img { position:absolute; object-fit:cover; background:#4a3578; }
+  .big { width:240px; height:310px; top:20px; right:20px; border-radius:18px; z-index:2;
+         box-shadow:14px 14px 0 #ff8a65; }
+  .medium { width:130px; height:150px; left:0; bottom:10px; background:#fff; padding:8px 8px 28px;
+            border-radius:4px; transform:rotate(-8deg); z-index:3; box-shadow:0 6px 18px rgba(0,0,0,0.5); }
+  .small { width:70px; height:70px; right:0; bottom:30px; border-radius:50%; border:4px solid #ffd54f; z-index:4; }
+
+  /* headings and lines */
+  hr { border:none; border-top:2px dashed #5b4390; margin:10px 0; }
+  .box { padding:50px 0 30px; }
+  h2 { font-size:30px; font-weight:600; color:#ffd54f; margin-bottom:6px; }
+  .small-text { color:#bfb0e6; margin-bottom:24px; }
+
+  /* education list */
+  ol { padding-left:24px; }
+  ol li { background:#3b2766; border-left:6px solid #ff8a65; border-radius:8px; padding:16px 20px; margin-bottom:16px; }
+  ol li::marker { color:#ffd54f; font-weight:600; font-size:20px; }
+
+  /* hobbies list */
+  ul { display:flex; flex-wrap:wrap; gap:12px; list-style:none; }
+  ul li { background:#3b2766; border:2px solid #5b4390; border-radius:30px; padding:8px 22px; }
+  ul li:hover { border-color:#ff8a65; background:#4a3578; }
+
+  /* text formatting */
+  b { color:#ffd54f; }
+  i { color:#ff8a65; }
+  u { text-decoration-color:#ff8a65; }
+
+  /* link */
+  a.link { color:#ff8a65; font-weight:600; }
+  a.link:hover { color:#ffd54f; }
+
+  .end { text-align:center; padding:40px 0 30px; color:#bfb0e6; }
+
+  @media (max-width:700px) {
+    h1 { font-size:42px; }
+    .navbar a { margin-left:12px; font-size:14px; }
+    .navbar h3 { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- navbar -->
+<div class="navbar">
+  <div class="container">
+    <h3>Humer</h3>
+    <div>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#link">Link</a>
+    </div>
+  </div>
+</div>
+
+<!-- top part with name, intro and photo -->
+<div class="top" id="about">
+  <div class="container">
+    <div class="text">
+      <p class="hello">Hello, I am</p>
+      <h1>Shaikh Humer</h1>
+      <p class="role">Student | Learning Web Development</p>
+      <p>
+        Hi! My name is <b>Shaikh Humer</b>. I am a <i>hardworking</i> student and I love to learn new things.<br><br>
+        Right now I am learning <u>HTML and web design</u>. In future I want to become a good web developer and make my own websites.
+      </p>
+    </div>
+
+    <!-- photo: keep photo.jpg in the same folder as this file -->
+    <div class="photo">
+      <img class="big" src="photo.jpg" alt="Shaikh Humer">
+      <img class="medium" src="photo.jpg" alt="Shaikh Humer">
+      <img class="small" src="photo.jpg" alt="Shaikh Humer">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- education -->
+<div class="box" id="education">
+  <div class="container">
+    <h2>Educational Qualifications</h2>
+    <p class="small-text">My studies till now</p>
+    <ol>
+      <li><b>10th (SSC)</b> - 72%</li>
+      <li><b>12th (HSC)</b> - 79%</li>
+    </ol>
+  </div>
+</div>
+
+<hr>
+
+<!-- hobbies -->
+<div class="box" id="hobbies">
+  <div class="container">
+    <h2>My Hobbies</h2>
+    <p class="small-text">Things I like to do in free time</p>
+    <ul>
+      <li>Coding</li>
+      <li>Playing Cricket</li>
+      <li>Listening to Music</li>
+      <li>Watching Videos</li>
+      <li>Reading</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<!-- link -->
+<div class="box" id="link">
+  <div class="container">
+    <h2>Useful Link</h2>
+    <p class="small-text">A website where I learn coding</p>
+    <p>Click here to visit: <a class="link" href="https://www.bamu.ac.in/">•  Dr. Babasaheb Ambedkar Marathwada University</a></p>
+  </div>
+</div>
+
+<hr>
+
+<div class="end">
+  <p>Thank you for visiting my page!<br>Have a nice day.</p>
+</div>
+
+</body>
+</html>
